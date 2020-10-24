@@ -19,30 +19,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endlessNight" translatesAutoresizingMaskIntoConstraints="NO" id="yZI-tR-zvM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girlDriving" translatesAutoresizingMaskIntoConstraints="NO" id="KpE-Of-6ws">
-                                <rect key="frame" x="0.0" y="312" width="414" height="232"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DI-Ti-E8N">
-                                <rect key="frame" x="20" y="712" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="It's too scary. Let's just go back home." backgroundImage="answerButtonTwo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Vhq-dk-hXI" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="YLQ-Ag-03V"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcR-0B-eDo">
-                                <rect key="frame" x="20" y="584" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start my drive." backgroundImage="answerButtonOne">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="A5K-Vm-hfC" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="hNe-gD-CdQ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You hate driving at night. But you really need to get to the grocery store and get a pineapple." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3v-Ol-Vua">
                                 <rect key="frame" x="54" y="77" width="307" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,14 +26,47 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kB5-bw-8Gr">
+                                <rect key="frame" x="10" y="568" width="394" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcR-0B-eDo">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="142"/>
+                                        <state key="normal" title="Start my drive." backgroundImage="answerButtonOne">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="A5K-Vm-hfC" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="hNe-gD-CdQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DI-Ti-E8N">
+                                        <rect key="frame" x="0.0" y="142" width="394" height="142"/>
+                                        <state key="normal" title="It's too scary. Let's just go back home." backgroundImage="answerButtonTwo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Vhq-dk-hXI" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="YLQ-Ag-03V"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="girlDriving" translatesAutoresizingMaskIntoConstraints="NO" id="KpE-Of-6ws">
+                                <rect key="frame" x="0.0" y="312" width="404" height="170"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="yZI-tR-zvM" secondAttribute="bottom" id="9Dv-00-kno"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kB5-bw-8Gr" secondAttribute="bottom" constant="10" id="AEQ-mg-Fzn"/>
+                            <constraint firstItem="KpE-Of-6ws" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BWv-67-U78"/>
+                            <constraint firstItem="kB5-bw-8Gr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="524" id="Eiu-cw-kQO"/>
                             <constraint firstItem="yZI-tR-zvM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MmK-Xk-dEc"/>
+                            <constraint firstItem="kB5-bw-8Gr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UiW-TT-3nb"/>
                             <constraint firstAttribute="trailing" secondItem="yZI-tR-zvM" secondAttribute="trailing" id="aSz-kQ-4jm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kB5-bw-8Gr" secondAttribute="trailing" constant="10" id="bB3-fu-0ji"/>
                             <constraint firstItem="yZI-tR-zvM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fgm-xu-rxL"/>
+                            <constraint firstItem="kB5-bw-8Gr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k00-BJ-WMB"/>
+                            <constraint firstItem="KpE-Of-6ws" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="waO-lH-GNP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Far-sF-Keh"/>
@@ -74,32 +83,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="endlessNight" translatesAutoresizingMaskIntoConstraints="NO" id="Rvg-Yg-H9C">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endlessNight" translatesAutoresizingMaskIntoConstraints="NO" id="Rvg-Yg-H9C">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNS-mz-UJI">
-                                <rect key="frame" x="20" y="546" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go back." backgroundImage="answerButtonOne">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="zxb-DK-9a2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QH-pD-w3Y">
-                                <rect key="frame" x="20" y="704" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Home." backgroundImage="answerButtonTwo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="GPi-pr-PLU"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hAb-5b-Xxl">
+                                <rect key="frame" x="10" y="568" width="394" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-UU-DDw">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="142"/>
+                                        <state key="normal" title="Go" backgroundImage="answerButtonOne">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tiT-Gv-aki"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qso-pP-d6y">
+                                        <rect key="frame" x="0.0" y="142" width="394" height="142"/>
+                                        <state key="normal" title="Home" backgroundImage="answerButtonTwo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="8Vj-cv-PcZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The story is over, so why are you still here? Go back home." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdL-Yi-wSX">
-                                <rect key="frame" x="54" y="122" width="307" height="227"/>
+                                <rect key="frame" x="54" y="94" width="307" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,6 +119,17 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fuh-o1-6Id"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Rvg-Yg-H9C" secondAttribute="bottom" id="0Eo-lr-mEy"/>
+                            <constraint firstAttribute="trailing" secondItem="Rvg-Yg-H9C" secondAttribute="trailing" id="D8Q-ly-qIv"/>
+                            <constraint firstItem="fuh-o1-6Id" firstAttribute="trailing" secondItem="hAb-5b-Xxl" secondAttribute="trailing" constant="10" id="Eb4-4P-MtV"/>
+                            <constraint firstItem="hAb-5b-Xxl" firstAttribute="leading" secondItem="fuh-o1-6Id" secondAttribute="leading" constant="10" id="Ip4-dP-Xjs"/>
+                            <constraint firstItem="hAb-5b-Xxl" firstAttribute="top" secondItem="fuh-o1-6Id" secondAttribute="top" constant="524" id="RWu-Ym-wU1"/>
+                            <constraint firstItem="Rvg-Yg-H9C" firstAttribute="leading" secondItem="BHB-3N-XEE" secondAttribute="leading" id="UPH-Xl-09o"/>
+                            <constraint firstItem="hAb-5b-Xxl" firstAttribute="centerX" secondItem="BHB-3N-XEE" secondAttribute="centerX" id="b5f-he-y9u"/>
+                            <constraint firstItem="Rvg-Yg-H9C" firstAttribute="top" secondItem="BHB-3N-XEE" secondAttribute="top" id="fs8-or-p2I"/>
+                            <constraint firstItem="fuh-o1-6Id" firstAttribute="bottom" secondItem="hAb-5b-Xxl" secondAttribute="bottom" constant="10" id="nuC-DQ-0OF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3b0-AR-b6D"/>
                 </viewController>
@@ -123,32 +145,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sawBoyRoad" translatesAutoresizingMaskIntoConstraints="NO" id="FVe-Uy-Yfn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sawBoyRoad" translatesAutoresizingMaskIntoConstraints="NO" id="FVe-Uy-Yfn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-Lw-dMG">
-                                <rect key="frame" x="20" y="587" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ask him if he needs a ride." backgroundImage="answerButtonOne">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iaK-Lm-0SX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="iCk-DD-wav"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbP-ib-OVa">
-                                <rect key="frame" x="20" y="712" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Drive right past him, because you're too shy." backgroundImage="answerButtonTwo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="IOc-nI-sQP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="9yM-Jq-daU"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eMJ-Bh-AXG">
+                                <rect key="frame" x="10" y="568" width="394" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQb-M0-f2X">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="142"/>
+                                        <state key="normal" title="Ask him if he wants a ride." backgroundImage="answerButtonOne">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="iaK-Lm-0SX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ZcE-7q-nIJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se9-hG-l2r">
+                                        <rect key="frame" x="0.0" y="142" width="394" height="142"/>
+                                        <state key="normal" title="Drive right past him, because you're too shy." backgroundImage="answerButtonTwo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="IOc-nI-sQP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4mj-qB-udx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="As you're driving, you see Micah, your crush from school, walking at night on the side of the road." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfs-Vk-fOk">
-                                <rect key="frame" x="68" y="108" width="307" height="227"/>
+                                <rect key="frame" x="54" y="68" width="307" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,6 +181,17 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="34m-Uc-Xnb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eMJ-Bh-AXG" firstAttribute="leading" secondItem="34m-Uc-Xnb" secondAttribute="leading" constant="10" id="ByA-ky-kQ6"/>
+                            <constraint firstItem="FVe-Uy-Yfn" firstAttribute="leading" secondItem="r1t-Gr-iQ4" secondAttribute="leading" id="Eev-ZJ-z5q"/>
+                            <constraint firstAttribute="bottom" secondItem="FVe-Uy-Yfn" secondAttribute="bottom" id="JYe-V0-MuE"/>
+                            <constraint firstAttribute="trailing" secondItem="FVe-Uy-Yfn" secondAttribute="trailing" id="fYC-ao-bSj"/>
+                            <constraint firstItem="eMJ-Bh-AXG" firstAttribute="centerX" secondItem="r1t-Gr-iQ4" secondAttribute="centerX" id="hkZ-GB-fXs"/>
+                            <constraint firstItem="eMJ-Bh-AXG" firstAttribute="top" secondItem="34m-Uc-Xnb" secondAttribute="top" constant="524" id="k2i-hF-6eg"/>
+                            <constraint firstItem="34m-Uc-Xnb" firstAttribute="trailing" secondItem="eMJ-Bh-AXG" secondAttribute="trailing" constant="10" id="lY2-Tp-kVR"/>
+                            <constraint firstItem="34m-Uc-Xnb" firstAttribute="bottom" secondItem="eMJ-Bh-AXG" secondAttribute="bottom" constant="10" id="s3f-9I-UTR"/>
+                            <constraint firstItem="FVe-Uy-Yfn" firstAttribute="top" secondItem="r1t-Gr-iQ4" secondAttribute="top" id="z0C-Ku-ma9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4na-Yn-mCD"/>
                 </viewController>
@@ -172,40 +207,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happilyEverAfter" translatesAutoresizingMaskIntoConstraints="NO" id="qDf-JW-gey">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happilyEverAfter" translatesAutoresizingMaskIntoConstraints="NO" id="qDf-JW-gey">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFy-Kq-0tt">
-                                <rect key="frame" x="20" y="612" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="The" backgroundImage="answerButtonOne">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="v8x-nJ-B4C"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Micah says thank you and you guys have a wonderful awkward and quiet drive for the next hour." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxJ-W5-k29">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Micah says thank you and you guys have a wonderful, awkward and quiet drive for the next hour." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxJ-W5-k29">
                                 <rect key="frame" x="54" y="80" width="307" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hl-PK-kdt">
-                                <rect key="frame" x="20" y="742" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="End" backgroundImage="answerButtonTwo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="0oU-OJ-InM"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Qm-1j-8aU">
+                                <rect key="frame" x="10" y="568" width="394" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0go-fs-eda">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="142"/>
+                                        <state key="normal" title="The" backgroundImage="answerButtonOne">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Wx3-7q-MAc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2M-mQ-gmc">
+                                        <rect key="frame" x="0.0" y="142" width="394" height="142"/>
+                                        <state key="normal" title="End" backgroundImage="answerButtonTwo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="sYt-mo-oiB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UT7-p0-2tR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UT7-p0-2tR" firstAttribute="bottom" secondItem="4Qm-1j-8aU" secondAttribute="bottom" constant="10" id="Nja-gY-FbK"/>
+                            <constraint firstAttribute="bottom" secondItem="qDf-JW-gey" secondAttribute="bottom" id="VIs-vj-589"/>
+                            <constraint firstItem="4Qm-1j-8aU" firstAttribute="leading" secondItem="UT7-p0-2tR" secondAttribute="leading" constant="10" id="Xm5-cp-IwM"/>
+                            <constraint firstItem="qDf-JW-gey" firstAttribute="top" secondItem="odm-aP-7sH" secondAttribute="top" id="d0X-eO-9r0"/>
+                            <constraint firstItem="4Qm-1j-8aU" firstAttribute="centerX" secondItem="odm-aP-7sH" secondAttribute="centerX" id="jHT-GR-31x"/>
+                            <constraint firstItem="qDf-JW-gey" firstAttribute="leading" secondItem="odm-aP-7sH" secondAttribute="leading" id="kJ8-8o-kTQ"/>
+                            <constraint firstItem="4Qm-1j-8aU" firstAttribute="top" secondItem="UT7-p0-2tR" secondAttribute="top" constant="524" id="oJp-sr-l20"/>
+                            <constraint firstAttribute="trailing" secondItem="qDf-JW-gey" secondAttribute="trailing" id="umL-gm-vXu"/>
+                            <constraint firstItem="UT7-p0-2tR" firstAttribute="trailing" secondItem="4Qm-1j-8aU" secondAttribute="trailing" constant="10" id="zjz-vs-ZBw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tig-cY-oBm"/>
                 </viewController>
@@ -221,30 +269,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scaryScene" translatesAutoresizingMaskIntoConstraints="NO" id="cNv-aA-Nbx">
-                                <rect key="frame" x="0.0" y="216" width="414" height="378"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="scaryScene" translatesAutoresizingMaskIntoConstraints="NO" id="cNv-aA-Nbx">
+                                <rect key="frame" x="20" y="270" width="374" height="291"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhH-jr-UfK">
-                                <rect key="frame" x="20" y="584" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="You turn back around to get him in the car." backgroundImage="answerButtonOne">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iaK-Lm-0SX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="iRv-Ce-oHs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9W-bV-ong">
-                                <rect key="frame" x="20" y="712" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="You scream and peace the heck out of there." backgroundImage="answerButtonTwo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Tyg-CB-y4P" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Q0x-45-rKs"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CqN-qS-xp8">
+                                <rect key="frame" x="10" y="568" width="394" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXd-r2-YEx">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="142"/>
+                                        <state key="normal" title="You turn back around to get him in the car." backgroundImage="answerButtonOne">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="iaK-Lm-0SX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="nay-dI-4yI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba0-TB-HSK">
+                                        <rect key="frame" x="0.0" y="142" width="394" height="142"/>
+                                        <state key="normal" title="You scream and peace the heck out of there." backgroundImage="answerButtonTwo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Tyg-CB-y4P" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="omz-Xq-khm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="As you drive past him, you look in the rear view mirror and see a shadow behind Micah." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lls-Ms-xcM">
                                 <rect key="frame" x="54" y="77" width="307" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -255,12 +305,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="peD-JX-buy"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="peD-JX-buy" firstAttribute="trailing" secondItem="CqN-qS-xp8" secondAttribute="trailing" constant="10" id="5ky-p7-Y3Y"/>
+                            <constraint firstItem="CqN-qS-xp8" firstAttribute="top" secondItem="peD-JX-buy" secondAttribute="top" constant="524" id="7LT-7E-4g4"/>
+                            <constraint firstItem="cNv-aA-Nbx" firstAttribute="centerX" secondItem="gxM-6w-KEB" secondAttribute="centerX" id="VDx-eW-Ehz"/>
+                            <constraint firstItem="cNv-aA-Nbx" firstAttribute="centerY" secondItem="gxM-6w-KEB" secondAttribute="centerY" id="f3V-ym-i5Z"/>
+                            <constraint firstItem="CqN-qS-xp8" firstAttribute="leading" secondItem="peD-JX-buy" secondAttribute="leading" constant="10" id="jNI-Tc-n5d"/>
+                            <constraint firstItem="CqN-qS-xp8" firstAttribute="centerX" secondItem="gxM-6w-KEB" secondAttribute="centerX" id="mNv-an-1Ak"/>
+                            <constraint firstItem="peD-JX-buy" firstAttribute="bottom" secondItem="CqN-qS-xp8" secondAttribute="bottom" constant="10" id="mfI-Vf-gcw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="clH-nI-BI9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5Z-yf-AGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528" y="94"/>
+            <point key="canvasLocation" x="1527.536231884058" y="93.75"/>
         </scene>
         <!--FinalSceneTwo-->
         <scene sceneID="hhQ-8F-mMD">
@@ -270,30 +329,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wonderCry" translatesAutoresizingMaskIntoConstraints="NO" id="bNf-4M-tkv">
-                                <rect key="frame" x="0.0" y="28" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wonderCry" translatesAutoresizingMaskIntoConstraints="NO" id="bNf-4M-tkv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1Z-Lp-jnd">
-                                <rect key="frame" x="20" y="726" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="End" backgroundImage="answerButtonTwo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="DbF-8h-Ik5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJR-pE-tV3">
-                                <rect key="frame" x="20" y="598" width="374" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="The" backgroundImage="answerButtonOne">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3Zk-Xh-vrE"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You will always wonder what if. Go get your pineapple." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8o-Nt-uBt">
                                 <rect key="frame" x="54" y="98" width="307" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -301,9 +339,43 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RpN-uZ-ifa">
+                                <rect key="frame" x="10" y="568" width="394" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZm-XS-YWV">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="142"/>
+                                        <state key="normal" title="The" backgroundImage="answerButtonOne">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="zcS-kq-bgV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2k-V8-fvT">
+                                        <rect key="frame" x="0.0" y="142" width="394" height="142"/>
+                                        <state key="normal" title="End" backgroundImage="answerButtonTwo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Bop-Zq-kih"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sb4-c8-yvI"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RpN-uZ-ifa" firstAttribute="centerX" secondItem="WJ4-s7-KkB" secondAttribute="centerX" id="E1G-ha-u0X"/>
+                            <constraint firstItem="RpN-uZ-ifa" firstAttribute="top" secondItem="sb4-c8-yvI" secondAttribute="top" constant="524" id="L1w-uf-G2G"/>
+                            <constraint firstItem="RpN-uZ-ifa" firstAttribute="leading" secondItem="sb4-c8-yvI" secondAttribute="leading" constant="10" id="UdJ-73-leW"/>
+                            <constraint firstAttribute="bottom" secondItem="bNf-4M-tkv" secondAttribute="bottom" id="ZXF-ex-pyN"/>
+                            <constraint firstItem="sb4-c8-yvI" firstAttribute="trailing" secondItem="RpN-uZ-ifa" secondAttribute="trailing" constant="10" id="cbJ-6h-jRd"/>
+                            <constraint firstItem="sb4-c8-yvI" firstAttribute="bottom" secondItem="RpN-uZ-ifa" secondAttribute="bottom" constant="10" id="ib6-nA-c7d"/>
+                            <constraint firstAttribute="trailing" secondItem="bNf-4M-tkv" secondAttribute="trailing" id="mqW-9L-lUe"/>
+                            <constraint firstItem="bNf-4M-tkv" firstAttribute="leading" secondItem="WJ4-s7-KkB" secondAttribute="leading" id="qxR-vH-9Xc"/>
+                            <constraint firstItem="bNf-4M-tkv" firstAttribute="top" secondItem="WJ4-s7-KkB" secondAttribute="top" id="zm0-KB-azv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vWt-9B-4tb"/>
                 </viewController>
@@ -313,8 +385,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iRv-Ce-oHs"/>
-        <segue reference="DbF-8h-Ik5"/>
+        <segue reference="nay-dI-4yI"/>
+        <segue reference="sYt-mo-oiB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="answerButtonOne" width="167" height="47.5"/>
